@@ -114,29 +114,29 @@ footer {
     width: 100%;
 }
 
-/* Ajustes para pantallas pequeñas */
+
 @media (max-width: 768px) {
     .informacion {
-        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
-        height: auto; /* Ajusta la altura automáticamente */
+        flex-direction: column;
+        height: auto; 
     }
 
     .float, .text {
-        flex: 0 0 100%; /* Ambos elementos ocupan el 100% del ancho */
+        flex: 0 0 100%; 
         width: 100%;
     }
 
     .img {
-        width: 100%; /* La imagen ocupará todo el ancho disponible */
-        max-width: 300px; /* Mantén una máxima anchura si es posible */
+        width: 100%; 
+        max-width: 300px; 
         padding: 2rem;
     }
 }
 
-/* Ajustes para pantallas grandes */
+
 @media (min-width: 768px) {
     .text {
-        flex: 0 0 50%; /* Ocupa el 50% del ancho en pantallas grandes */
+        flex: 0 0 50%; 
         width: 500px;
     }
 }
