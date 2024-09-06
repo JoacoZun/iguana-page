@@ -1,8 +1,10 @@
-* {
-    margin: 0%;
+body, html {
+    height: 100%;
+    margin: 0;
     box-sizing: border-box;
- }
-header{
+}
+
+header {
     display: flex;
     background: #000;
     justify-content: center;
@@ -10,92 +12,131 @@ header{
     height: 3em;
     line-height: 3em;
     font-size: xx-large;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
-     }
-.container {
-    width: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
 .imagen {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        height: 100%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
 }
+
 .informacion {
     display: flex;
     background: #000;
     color: white;
     align-items: center;
     justify-content: center;
-    align-content: center;
     flex-direction: row;
     height: 300px;
-     }
-.float{
+}
+
+.float {
     flex: 0 0 50%;
     display: flex;
     justify-content: center;
 }
+
 .img {
     width: 300px;
 }
-.text{
+
+.text {
     display: flex;
-    flex: 0 0 50%;
-    width: 500px;
+    flex: 0 0 100%;
+    width: 100%;
     flex-direction: column;
     align-content: center;
     justify-content: center;
     align-items: center;
     text-align: left;
     max-width: 500px;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
 .caracteristicas {
-        background: #1E1A13;
-        padding: 4rem 2rem;
-        text-align: center;
-        color: white;
-        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
-     }    
+    background: #1E1A13;
+    padding: 4rem 2rem;
+    text-align: center;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 .caracteristicas h2 {
     margin-bottom: 2rem;
-    }
+}
+
 .caracteristicas .datos {
     display: flex;
     justify-content: center;
     gap: 1.5rem;
-    }
+}
+
 .caracteristicas .datos .tarjeta {
-        width: 25%;
-     }
+    width: 25%;
+}
+
 .tarjeta i {
-        font-size: 60px;
-        margin-bottom: 1rem;
-         }
+    font-size: 60px;
+    margin-bottom: 1rem;
+}
+
 .galeria {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        background: #000000;
-        padding: 4rem 2rem;
-        }
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    background: #000000;
+    padding: 4rem 2rem;
+}
+
 .tarjeta {
-            text-align: center;
-            width: 22.5%;
-        }
+    text-align: center;
+    width: 22.5%;
+}
+
 .tarjeta img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            justify-content: space-around;
-         }
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    justify-content: space-around;
+}
+
 footer {
-            height: 3em;
-            line-height: 3em;
-            background-color: #1E1A13;
-            color: white;
-            text-align: center;
-            font-weight: 900;
-            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
-            }
+    line-height: 3em;
+    background-color: #1E1A13;
+    color: white;
+    text-align: center;
+    font-weight: 900;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .informacion {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        height: auto; /* Ajusta la altura automáticamente */
+    }
+
+    .float, .text {
+        flex: 0 0 100%; /* Ambos elementos ocupan el 100% del ancho */
+        width: 100%;
+    }
+
+    .img {
+        width: 100%; /* La imagen ocupará todo el ancho disponible */
+        max-width: 300px; /* Mantén una máxima anchura si es posible */
+        padding: 2rem;
+    }
+}
+
+/* Ajustes para pantallas grandes */
+@media (min-width: 768px) {
+    .text {
+        flex: 0 0 50%; /* Ocupa el 50% del ancho en pantallas grandes */
+        width: 500px;
+    }
+}
